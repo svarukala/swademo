@@ -8,13 +8,8 @@
   "runtime": {
     "rest": {
       "enabled": true,
-      "path": "/rest",
+      "path": "/api",
       "request-body-strict": true
-    },
-    "graphql": {
-      "enabled": true,
-      "path": "/graphql",
-      "allow-introspection": true
     },
     "host": {
       "cors": {
@@ -28,17 +23,10 @@
     }
   },
   "entities": {
-    "SupplyChainDB": {
+    "workorders": {
       "source": {
         "object": "supplychaindb.workorders",
         "type": "table"
-      },
-      "graphql": {
-        "enabled": true,
-        "type": {
-          "singular": "SupplyChainDB",
-          "plural": "SupplyChainDBs"
-        }
       },
       "rest": {
         "enabled": true
